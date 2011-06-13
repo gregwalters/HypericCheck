@@ -1,11 +1,11 @@
 NAME
-	HypericChecker - resource checker for Hyperic resources
+	HypericCheck - resource checker for Hyperic resources
 
 SYNOPSIS
-	HypericChecker.sh [-d] [-h] [-p defaults-file] [-s AEID] [-r RID]
+	HypericCheck.sh [-d] [-h] [-p defaults-file] [-s AEID] [-r RID]
 
 DESCRIPTION
-	HypericChecker is a java wrapper for Hyperic measurement plugins specifically intended to perform on-demand checks of netservices plugin resources. The wrapper uses several classes and methods from Hyperic to call the actual code that the Hyperic agent uses to collect metrics on a resource in a consistent and reproducable manner. Multiple AEID's and RID's can be specified on the command line to check multiple resources with one invokation. Binary packages can be downloaded at http://hyperic.allrightname.com/HypericCheck-latest.tar.bz2
+	HypericCheck is a java wrapper for Hyperic measurement plugins specifically intended to perform on-demand checks of netservices plugin resources. The wrapper uses several classes and methods from Hyperic to call the actual code that the Hyperic agent uses to collect metrics on a resource in a consistent and reproducable manner. Multiple AEID's and RID's can be specified on the command line to check multiple resources with one invokation. Binary packages can be downloaded at http://hyperic.allrightname.com/HypericCheck-latest.tar.bz2
 
 OPTIONS
 	-d	Enable DEBUG logging
