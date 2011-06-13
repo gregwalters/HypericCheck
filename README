@@ -5,7 +5,7 @@ SYNOPSIS
 	HypericChecker.sh [-d] [-h] [-p defaults-file] [-s AEID] [-r RID]
 
 DESCRIPTION
-	HypericChecker is a java wrapper for Hyperic measurement plugins specifically intended to perform on-demand checks of netservices plugin resources. The wrapper uses several classes and methods from Hyperic to call the actual code that the Hyperic agent uses to collect metrics on a resource in a consistent and reproducable manner. Multiple AEID's and RID's can be specified on the command line to check multiple resources with one invokation.
+	HypericChecker is a java wrapper for Hyperic measurement plugins specifically intended to perform on-demand checks of netservices plugin resources. The wrapper uses several classes and methods from Hyperic to call the actual code that the Hyperic agent uses to collect metrics on a resource in a consistent and reproducable manner. Multiple AEID's and RID's can be specified on the command line to check multiple resources with one invokation. Binary packages can be downloaded at http://hyperic.allrightname.com/HypericCheck-latest.tar.bz2
 
 OPTIONS
 	-d	Enable DEBUG logging
@@ -49,7 +49,7 @@ FILES
 BUGS
 	None found yet :)
 
-NOTE
+WARRANTY
 
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. THIS SOFTWARE IS NOT SUPPORTED BY VMWARE/HYPERIC.
 
