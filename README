@@ -1,0 +1,58 @@
+NAME
+	HypericChecker - resource checker for Hyperic resources
+
+SYNOPSIS
+	HypericChecker.sh [-d] [-h] [-p defaults-file] [-s AEID] [-r RID]
+
+DESCRIPTION
+	HypericChecker is a java wrapper for Hyperic measurement plugins specifically intended to perform on-demand checks of netservices plugin resources. The wrapper uses several classes and methods from Hyperic to call the actual code that the Hyperic agent uses to collect metrics on a resource in a consistent and reproducable manner. Multiple AEID's and RID's can be specified on the command line to check multiple resources with one invokation.
+
+OPTIONS
+	-d	Enable DEBUG logging
+
+	-h	This help message
+
+	-p	defaults-file
+		Use an alternate properties file as the configuration source. Defaults to ~/.hq/client.properties
+
+	-s	AEID
+		Specify a resource to collect metrics on via AEID. AEID's can be found as the last 5 digits on a resource's URL within the Hyperic GUI
+
+	-r	RID
+		Specify a resource to collect metrics on via RID. RID's can be found using the hqapi.
+
+FILES
+	~/.hq/client.properties
+		The default configuration file. Expects the file to conform to Java's syntax for properties files and takes values in the <key>=<value> form.
+		Sample config:
+
+			host=monitor.mynetwork.com
+			port=7443
+			secure=true
+			user=hqadmin
+			password=hqadmin
+
+		Aside from the default options for hqapi in the client.properties file, the following HypericCheck specific options are expected:
+
+			hc.pdkDir	Full path to the lib/pdk directory that came with this utility
+			hc.pluginDir	Full path to the lib/plugins directory that came with this utility
+
+		The following options are optional and apply to the usage of the PasswordBouncer utility so that no passwords need to be on your filesystem. If you use these options, the password key need not have a value.
+
+			hc.password.source	Only accepts \"pb\".
+			hc.password.port	Port that PasswordBouncer is listening on. Defaults to 10127.
+			hc.password.host	Address that PasswordBouncer is listening on. Defaults to localhost.
+			hc.password.string	String that PasswordBouncer expects prior to returning a password. Defaults to MYPASSWORD.
+
+			hc.metricsetSet this to "all", "availability", "throughput", or "utilization" to see metrics of a different category.
+
+BUGS
+	None found yet :)
+
+NOTE
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. THIS SOFTWARE IS NOT SUPPORTED BY VMWARE/HYPERIC.
+
+AUTHOR
+	Greg Walters <allrightname at gmail>
+
